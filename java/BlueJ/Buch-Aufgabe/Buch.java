@@ -27,22 +27,22 @@ class Buch
     }
 
     // Autor auslesen
-    public String gibAutor() {
+    public String getAutor() {
       return autor;
     }
 
     // Titel auslesen
-    public String gibTitel() {
+    public String getTitel() {
       return titel;
     }
 
     // Signatur auslesen
-    public String gibSignatur() {
+    public String getSignatur() {
       return signatur;
     }
 
     // Auslesen, wie oft das Buch ausgeliehen wurde
-    public int gibAusleihanzahl() {
+    public int getAusleihanzahl() {
       return ausleihAnzahl;
     }
 
@@ -59,12 +59,12 @@ class Buch
     }
 
     // Autor ändern
-    public void schreibAutor(String newAutor) {
+    public void setAutor(String newAutor) {
       autor = newAutor;
     }
 
     // Titel ändern
-    public void schreibTitel(String newTitel) {
+    public void setTitel(String newTitel) {
       titel = newTitel;
     }
 
