@@ -14,8 +14,8 @@ class Buch {
     private int moeglicheAusleihzeit;
 
     /**
-     * Setze den Autor und den Titel, wenn ein Exemplar erzeugt wird.
-     */
+       * Setze den Autor und den Titel, wenn ein Exemplar erzeugt wird.
+       */
     public Buch(String buchautor, String buchtitel, int seitenzahl) {
         autor = buchautor;
         titel = buchtitel;
