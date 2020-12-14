@@ -1,5 +1,5 @@
-class Buch
-{
+class Buch {
+
     // Autor des Buches
     private String autor;
     // Titel des Buches
@@ -16,8 +16,7 @@ class Buch
     /**
      * Setze den Autor und den Titel, wenn ein Exemplar erzeugt wird.
      */
-    public Buch(String buchautor, String buchtitel, int seitenzahl)
-    {
+    public Buch(String buchautor, String buchtitel, int seitenzahl) {
         autor = buchautor;
         titel = buchtitel;
         seiten = seitenzahl;
