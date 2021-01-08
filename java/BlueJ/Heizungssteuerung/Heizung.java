@@ -1,6 +1,6 @@
 public class Heizung {
 
-    // Temperatur
+    // Temperatur der Heizung
     float temperatur;
 
     public Heizung(float pTemperatur) {
