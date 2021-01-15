@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=Auto
+comment1.params=pMaxSpeed\ pTankGroesse\ pID\ pAnzahlSitze
+comment1.target=Auto(float,\ float,\ java.lang.String,\ int)
+numComments=2
