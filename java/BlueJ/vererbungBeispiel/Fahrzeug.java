@@ -1,5 +1,6 @@
 public class Fahrzeug {
 
+    // Variablen, die alle Subklassen nutzen können
     protected float maxSpeed;
     protected float tankGroesse;
     protected String id;
@@ -10,6 +11,8 @@ public class Fahrzeug {
       id = pID;
     }
 
+
+    // Methoden, die alle Subklassen nutzen können
     public void fahre() {
       System.out.println("Fahren");
     }
