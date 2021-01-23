@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=binaerSuche
+comment1.params=
+comment1.target=binaerSuche()
+comment2.params=exampleArray\ suchschluessel
+comment2.target=boolean\ binaereSuche(int[],\ int)
+numComments=3
