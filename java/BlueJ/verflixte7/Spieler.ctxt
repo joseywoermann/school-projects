@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=pWuerfel1\ pWuerfel2\ pTopf
+comment0.target=Spieler(Wuerfel,\ Wuerfel,\ Topf)
+comment0.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Spieler\r\n\ Mit\ der\ folgenden\ Methode\ wird\ ein\ Objekt\ der\ Klasse\ Spieler\ hergestellt.\r\n
+comment1.params=
+comment1.target=int\ punktestandAngeben()
+comment1.text=\r\n\ Die\ bis\ dahin\ erreichte\ Punktesumme\ wird\ zur\u00FCckgegeben.\r\n\ \r\n
+comment2.params=
+comment2.target=void\ topfLeeren()
+comment2.text=\r\n\ (Hier\ fehlen\ die\ Kommentare.\ Das\ ist\ Ihre\ Aufgabe\:.........)\r\n
+comment3.params=
+comment3.target=int\ wurfAnzahlAngeben()
+comment3.text=\r\n\ \r\n
+comment4.params=einsatz
+comment4.target=void\ einsatzSetzen(int)
+comment4.text=\r\n\ \r\n
+comment5.params=
+comment5.target=void\ wuerfeln()
+comment5.text=\r\n\ \r\n
+comment6.params=neuerName
+comment6.target=void\ setName(java.lang.String)
+comment6.text=\r\n\ \r\n
+numComments=7

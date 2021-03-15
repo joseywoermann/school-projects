@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Topf()
+comment0.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Topf\:\r\n
+comment1.params=
+comment1.target=int\ einsatzAbgeben()
+comment1.text=\r\n\r\n\ Gibt\ die\ Summe,\ die\ im\ Topf\ liegt,\ zur\u00FCck\ und\ leert\ den\ Topf.\r\n
+comment2.params=einsatz
+comment2.target=void\ einsatzAufnehmen(int)
+comment2.text=\r\n\ nimmt\ den\ einsatz\ auf\r\n
+numComments=3

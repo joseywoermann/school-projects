@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Wuerfel()
+comment0.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Wuerfel\:\r\n
+comment1.params=
+comment1.target=int\ punktzahlAngeben()
+comment1.text=\r\n\ Diese\ Methode\ gibt\ die\ gew\u00FCrfelte\ Augenzahl\ zur\u00FCck.\r\n
+comment2.params=maximum
+comment2.target=int\ zufallsZahlAusgeben(int)
+comment2.text=\r\n\ Diese\ Methode\ liefert\ einen\ Zufallswert\ zwischen\ 1\ und\ maximum\ \r\n
+comment3.params=
+comment3.target=void\ rollen()
+comment3.text=\r\n\ l\u00E4sst\ den\ W\u00FCrfel\ rollen\r\n
+numComments=4
