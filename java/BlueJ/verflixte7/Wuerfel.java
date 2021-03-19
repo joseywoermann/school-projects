@@ -37,8 +37,8 @@ public class Wuerfel
 
    private int zufallsZahlAusgeben(int maximum)
    {
-      int wert=0;
-      wert =(int)Math.round(Math.random()*(maximum-1))+1;
+      int wert = 0;
+      wert = (int)Math.round(Math.random()*(maximum-1))+1;
       return wert;
    }
 

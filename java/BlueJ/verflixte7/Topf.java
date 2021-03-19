@@ -1,8 +1,8 @@
 
 /**
  * Klasse Topf nach Beschreibung
- * 
- * @author David Tepaße
+ *
+ * @author David Tepaï¿½e
  * @version 01
  */
 
@@ -14,23 +14,23 @@ public class Topf
    private int einsatz;
 
     /**
-     * Konstruktor für Objekte der Klasse Topf:
+     * Konstruktor fï¿½r Objekte der Klasse Topf:
      */
    public Topf()
    {
-       // der Einsatz wird auf 0 gesetzt
-       this.einsatz = 0;
+     // der Einsatz wird auf 0 gesetzt
+     this.einsatz = 0;
    }
 
    /**
     *
-    * Gibt die Summe, die im Topf liegt, zurück und leert den Topf.
+    * Gibt die Summe, die im Topf liegt, zurï¿½ck und leert den Topf.
     */
    public int einsatzAbgeben ()
    {
-        int merkEinsatz=this.einsatz;
-        this.einsatz=0;
-        return merkEinsatz;     
+    int merkEinsatz=this.einsatz;
+    this.einsatz=0;
+    return merkEinsatz;
    }
 
    /**
@@ -38,8 +38,7 @@ public class Topf
     */
    public void einsatzAufnehmen (int einsatz)
    {
-        this.einsatz = this.einsatz + einsatz;
+    this.einsatz = this.einsatz + einsatz;
    }
 
 }
-

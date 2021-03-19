@@ -28,6 +28,7 @@ public class Spieler
    private int punkte;
    private int vermoegen;
    private int wurfAnzahl;
+   private int pPunkte;
 
    /**
     * Konstruktor f�r Objekte der Klasse Spieler
@@ -84,11 +85,20 @@ public class Spieler
    /**
     * Führt die Methode "rollen()" bei 2 Würfeln aus und addiert die Augenzahl
     */
-  public void wuerfeln (){
+  public void wuerfeln () {
     wuerfel1.rollen();
     wuerfel2.rollen();
-    this.punkte = this.punktestandAngeben()+wuerfel1.punktzahlAngeben()+wuerfel2.punktzahlAngeben();
+
+    pPunkte = wuerfel1.punktzahlAngeben() + wuerfel2.punktzahlAngeben();
+
+    if (pPunkte == 7) {
+      pPunkte = this.punktestandAngeben() - 7;
+    }
+
+    this.punkte = this.punktestandAngeben() + pPunkte;
+    pPunkte = 0;
     this.wurfAnzahl++;
+    System.out.println("Zug beendet, der andere Spieler ist am Zug!");
   }
 
    /**
