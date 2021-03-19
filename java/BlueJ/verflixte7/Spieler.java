@@ -92,7 +92,7 @@ public class Spieler
     pPunkte = wuerfel1.punktzahlAngeben() + wuerfel2.punktzahlAngeben();
 
     if (pPunkte == 7) {
-      pPunkte = this.punktestandAngeben() - 7;
+      pPunkte = pPunkte - 7;
     }
 
     this.punkte = this.punktestandAngeben() + pPunkte;
