@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Spieler
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Spieler\ here.\r\n\r\n\ @author\r\n\ @version\ 0.0.1\r\n
+comment1.params=pTopf\ pSchachtel
+comment1.target=Spieler(Topf,\ Schachtel)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Spieler\r\n
+comment2.params=pGegner
+comment2.target=void\ gegnerFestlegen(Spieler)
+comment3.params=
+comment3.target=void\ chipEinlegen()
+comment4.params=pAnzahl
+comment4.target=void\ staebchenEinlegen(int)
+comment5.params=pAnzahl
+comment5.target=void\ staebchenZiehen(int)
+numComments=6

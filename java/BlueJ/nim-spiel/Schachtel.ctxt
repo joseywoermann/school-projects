@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Schachtel
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Schachtel\ here.\r\n\r\n\ @author\r\n\ @version\ 0.0.1\r\n
+comment1.params=
+comment1.target=Schachtel()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Schachtel\r\n
+comment2.params=pAnzahl
+comment2.target=void\ staebchenAufnehmen(int)
+comment3.params=pAnzahl
+comment3.target=void\ staebchenAusgeben(int)
+numComments=4
