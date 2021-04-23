@@ -19,4 +19,11 @@ public class Topf {
     this.anzahlChips++;
   }
 
+  public void topfLeeren() {
+    if (this.anzahlChips < 2) {
+      System.out.println("Error. - Nicht genügend Chips im Topf.");
+    } else {
+      this.anzahlChips = this.anzahlChips - 2;
+    }
+  }
 }

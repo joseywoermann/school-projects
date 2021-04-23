@@ -8,4 +8,6 @@ comment2.params=pAnzahl
 comment2.target=void\ staebchenAufnehmen(int)
 comment3.params=pAnzahl
 comment3.target=void\ staebchenAusgeben(int)
-numComments=4
+comment4.params=
+comment4.target=int\ getStabechenAnzahl()
+numComments=5

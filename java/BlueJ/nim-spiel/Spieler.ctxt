@@ -12,4 +12,6 @@ comment4.params=pAnzahl
 comment4.target=void\ staebchenEinlegen(int)
 comment5.params=pAnzahl
 comment5.target=void\ staebchenZiehen(int)
-numComments=6
+comment6.params=pAnzahl
+comment6.target=void\ fuegeChipsHinzu(int)
+numComments=7
