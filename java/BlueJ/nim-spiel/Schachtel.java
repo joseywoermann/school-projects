@@ -30,6 +30,10 @@ public class Schachtel {
   // Stäbchen an einen Spieler ausgeben, wenn vorhanden
   public void staebchenAusgeben(int pAnzahl) {
     this.anzahlStaebchen = this.anzahlStaebchen - pAnzahl;
+
+    if (this.anzahlStaebchen <= 0) {
+      this.staebchenVorhanden = false;
+    }
   }
 
   // Anzahl der Stäbchen ausgeben

@@ -5,18 +5,13 @@
  * @version 0.0.1
  */
 
-/*
 
-TODO:
- - Überprüfen, ob noch ausreichend Stäbchen vorhanden sind
- - überprüfen, ob der Spieler gerade schon gezogen hat
-
-*/
 public class Spieler {
 
   // Attribute
   private int anzahlChips;
   private boolean istGewinner;
+  private boolean hatGezogen;
 
   // bekannte Objekte
   private Topf topf;
@@ -30,6 +25,7 @@ public class Spieler {
   public Spieler(Topf pTopf, Schachtel pSchachtel) {
     this.anzahlChips = 3;
     this.istGewinner = false;
+    this.hatGezogen = false;
 
     this.topf = pTopf;
     this.schachtel = pSchachtel;
@@ -60,34 +56,50 @@ public class Spieler {
   // 1 bis 3 Stäbchen ziehen
   public void staebchenZiehen(int pAnzahl) {
 
-    // Prüfen ob die Anzahl der Stäbchen erlaubt ist
-    if (pAnzahl >= 1 && pAnzahl <= 3) {
-
-      // Wenn der Spieler das / die letze(n) Stäbchen zieht
-      if (schachtel.getStabechenAnzahl() <= pAnzahl) {
-
-        // TODO: Überprüfen, ob noch ausreichend Stäbchen vorhanden sind
-
-        // Topf leeren und Chips an den Gegner auszahlen
-        schachtel.staebchenAusgeben(pAnzahl);
-        topf.topfLeeren();
-        gegner.fuegeChipsHinzu(2);
-        gegner.istGewinner = true;
-
-      } else {
-        schachtel.staebchenAusgeben(pAnzahl);
-      }
-
+    // Prüfen, ob der aktuelle Spieler als letztes gezogen hat
+    if (this.hatGezogen == true) {
+      System.out.println("Der Gegner ist am Zug!");
     } else {
-      System.out.println("Du darfst nur 1 bis 3 Stäbchen ziehen");
+
+      // Prüfen ob die Anzahl der Stäbchen erlaubt ist
+      if (pAnzahl >= 1 && pAnzahl <= 3) {
+
+        // Verhindern, dass die Anzahl der Stäbchen in der Schachtel negativ wird
+        if (schachtel.getStabechenAnzahl() - pAnzahl < 0) {
+          System.out.println("Es sind nicht genügend Stäbchen vorhanden.");
+        } else {
+
+          // Wenn der Spieler das / die letze(n) Stäbchen zieht
+          if (schachtel.getStabechenAnzahl() <= pAnzahl) {
+
+            // Topf leeren und Chips an den Gegner auszahlen
+            schachtel.staebchenAusgeben(pAnzahl);
+            topf.topfLeeren();
+            gegner.fuegeChipsHinzu(2);
+            gegner.istGewinner = true;
+
+          } else {
+            schachtel.staebchenAusgeben(pAnzahl);
+          }
+          // Spieler hat als letztes gezogen & Gegner darf wieder ziehen
+          this.hatGezogen = true;
+          gegnerDarfZiehen();
+        }
+      } else {
+        System.out.println("Du darfst nur 1 bis 3 Stäbchen ziehen");
+      }
     }
   }
 
-
+  // Chips zum Spieler hinzufügen
   public void fuegeChipsHinzu(int pAnzahl) {
     if (pAnzahl >= 1) {
       this.anzahlChips = this.anzahlChips + pAnzahl;
     }
   }
 
+  // Gegner "befreien"
+  public void gegnerDarfZiehen() {
+    gegner.hatGezogen = false;
+  }
 }

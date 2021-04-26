@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Spieler
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Spieler\ here.\r\n\r\n\ @author\r\n\ @version\ 0.0.1\r\n
+comment0.text=\r\n\r\nTODO\:\r\n\ -\ \u00DCberpr\u00FCfen,\ ob\ noch\ ausreichend\ St\u00E4bchen\ vorhanden\ sind\r\n\ -\ \u00FCberpr\u00FCfen,\ ob\ der\ Spieler\ gerade\ schon\ gezogen\ hat\r\n\r\n
 comment1.params=pTopf\ pSchachtel
 comment1.target=Spieler(Topf,\ Schachtel)
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Spieler\r\n
