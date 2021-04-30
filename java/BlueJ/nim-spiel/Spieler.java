@@ -1,10 +1,7 @@
-/**
- * Write a description of class Spieler here.
- *
- * @author
- * @version 0.0.1
- */
-
+/*TODO:
+ - Nach Reset darf der Gegner wieder ziehen
+ - Melden, wann das Spiel zuende ist
+*/
 
 public class Spieler {
 
@@ -76,14 +73,16 @@ public class Spieler {
             schachtel.staebchenAusgeben(pAnzahl);
             topf.topfLeeren();
             gegner.fuegeChipsHinzu(2);
-            gegner.istGewinner = true;
+            gegner.setGewinner(true);
+
+            System.out.println("Du hast verloren");
 
           } else {
             schachtel.staebchenAusgeben(pAnzahl);
           }
           // Spieler hat als letztes gezogen & Gegner darf wieder ziehen
           this.hatGezogen = true;
-          gegnerDarfZiehen();
+          this.gegnerDarfZiehen();
         }
       } else {
         System.out.println("Du darfst nur 1 bis 3 Stäbchen ziehen");
@@ -91,7 +90,7 @@ public class Spieler {
     }
   }
 
-  // Chips zum Spieler hinzufügen
+  // Chips zum Gewinner hinzufügen
   public void fuegeChipsHinzu(int pAnzahl) {
     if (pAnzahl >= 1) {
       this.anzahlChips = this.anzahlChips + pAnzahl;
@@ -101,5 +100,21 @@ public class Spieler {
   // Gegner "befreien"
   public void gegnerDarfZiehen() {
     gegner.hatGezogen = false;
+  }
+
+  // Spieler als Gewinner festlegen
+  public void setGewinner(boolean pWahrOderFalsch) {
+    this.istGewinner = pWahrOderFalsch;
+  }
+
+  // Werte für 2te Runde zurücksetzen
+  public void resetAll() {
+    this.istGewinner = false;
+    this.hatGezogen = false;
+
+    // auch in Schachtel & Topf
+    schachtel.resetSchachtel();
+    topf.resetTopf();
+    System.out.println("Werte zurückgesetzt");
   }
 }

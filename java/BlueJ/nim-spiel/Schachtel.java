@@ -1,9 +1,3 @@
-/**
- * Write a description of class Schachtel here.
- *
- * @author
- * @version 0.0.1
- */
 public class Schachtel {
 
   private int anzahlStaebchen;
@@ -39,6 +33,12 @@ public class Schachtel {
   // Anzahl der Stäbchen ausgeben
   public int getStabechenAnzahl() {
     return this.anzahlStaebchen;
+  }
+
+  // Werte für 2te Runde zurücksetzen
+  public void resetSchachtel() {
+    this.anzahlStaebchen = 0;
+    this.staebchenVorhanden = false;
   }
 
 }

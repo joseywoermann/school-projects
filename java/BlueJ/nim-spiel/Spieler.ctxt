@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Spieler
-comment0.text=\r\n\r\nTODO\:\r\n\ -\ \u00DCberpr\u00FCfen,\ ob\ noch\ ausreichend\ St\u00E4bchen\ vorhanden\ sind\r\n\ -\ \u00FCberpr\u00FCfen,\ ob\ der\ Spieler\ gerade\ schon\ gezogen\ hat\r\n\r\n
+comment0.text=\r\nTODO\:\r\n\ -\ Nach\ Reset\ darf\ der\ Gegner\ wieder\ ziehen\r\n\ -\ Melden,\ wann\ das\ Spiel\ zuende\ ist\r\n
 comment1.params=pTopf\ pSchachtel
 comment1.target=Spieler(Topf,\ Schachtel)
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Spieler\r\n
@@ -14,4 +14,10 @@ comment5.params=pAnzahl
 comment5.target=void\ staebchenZiehen(int)
 comment6.params=pAnzahl
 comment6.target=void\ fuegeChipsHinzu(int)
-numComments=7
+comment7.params=
+comment7.target=void\ gegnerDarfZiehen()
+comment8.params=pWahrOderFalsch
+comment8.target=void\ setGewinner(boolean)
+comment9.params=
+comment9.target=void\ resetAll()
+numComments=10

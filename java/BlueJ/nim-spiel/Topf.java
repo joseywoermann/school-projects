@@ -1,9 +1,3 @@
-/**
- * Write a description of class Topf here.
- *
- * @author
- * @version 0.0.1
- */
 public class Topf {
 
   private int anzahlChips;
@@ -27,5 +21,10 @@ public class Topf {
     } else {
       this.anzahlChips = this.anzahlChips - 2;
     }
+  }
+
+  // Werte für 2te Runde zurücksetzen
+  public void resetTopf() {
+    this.anzahlChips = 0;
   }
 }
