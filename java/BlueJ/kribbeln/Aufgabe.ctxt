@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Aufgabe
+comment1.params=
+comment1.target=Aufgabe()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Aufgabe\r\n
+comment2.params=
+comment2.target=java.lang.String\ zufallsAufgabeGenerieren()
+comment3.params=
+comment3.target=void\ aufgabeAuswerten()
+numComments=4

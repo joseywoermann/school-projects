@@ -1,0 +1,8 @@
+1.
+
+Farbe x
+Farbe x nicht
+
+x unterschiedliche Farben
+
+{ <welche farbe> <anzahl> <gleich / unterschiedlich> }
