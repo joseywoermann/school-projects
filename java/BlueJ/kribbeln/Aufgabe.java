@@ -10,19 +10,19 @@
     private String[][] aufgaben = {
         {
             "rot",
-            "1",
+            "eins",
             "unterschiedlich",
             "Würfele mindestens einmal rot."
         },
         {
             "blau",
-            "3",
+            "drei",
             "gleich",
             "Würfele dreimal blau"
         },
         {
             "egal",
-            "2",
+            "zwei",
             "gleich",
             "Würfele mindestens zweimal die gleiche Farbe."
         }
@@ -40,14 +40,25 @@
     public String zufallsAufgabeGenerieren() {
         zahl = (int)Math.round(Math.random() * (2 - 0));
         aufgabenstellung = aufgaben[zahl][3];
-        aufgabe = aufgaben[zahl];
+        this.aufgabe = aufgaben[zahl];
 
         return aufgabenstellung;
     }
 
-    // Auswerten, ob der Spieler die Aufgabe erfüllt hat
-    public void aufgabeAuswerten(String[] pSpielerdaten) {
+    /**
+     * Auswerten, ob der Spieler die Aufgabe erfüllt hat
+     * @param pFarbe
+     * @param pAnzahlFarbe
+     */
+    public void aufgabeAuswerten(String pFarbe, String[] pGewuerfelteFarben) {
+      
+      
 
+      if (pFarbe == this.aufgabe[0] && pAnzahlFarbe == this.aufgabe[1]) {
+        System.out.println("Du hast deine Aufgabe erfolgreich erfüllt, " + pAnzahlFarbe + " " + pFarbe + "e Felder.");
+      } else {
+        System.out.println("Du hast deine Aufgabe nicht erfüllt, du hattest " + pAnzahlFarbe + " " + pFarbe + "e Felder.");
+      }
     }
 
 }
