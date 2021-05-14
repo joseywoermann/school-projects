@@ -2,11 +2,11 @@ public class Wuerfel {
 
     private String[] farben = {
         "blau",   // 0
-        "gelb",   //1
-        "grün",   //2
-        "rot",    //3
-        "weiß",   //4
-        "schwarz" //5
+        "gelb",   // 1
+        "grün",   // 2
+        "rot",    // 3
+        "weiß",   // 4
+        "schwarz" // 5
     };
 
     private String[][] gewuerfelteFarben = {
@@ -30,11 +30,9 @@ public class Wuerfel {
       }
     };
 
-    private String augenzahlString;
-
-    private String farbe;
     private int zahl = 0;
 
+    // Anzahl der geworfenen Zahlen
     private int blaus = 0;
     private int gelbs = 0;
     private int gruens = 0;
@@ -46,8 +44,9 @@ public class Wuerfel {
     /**
      * Constructor for objects of class Wuerfel
      */
-    public Wuerfel() {}
-
+    public Wuerfel() {
+      
+    }
 
     /**
      * Würfel 9 mal würfeln
@@ -59,6 +58,40 @@ public class Wuerfel {
         this.zahl = this.zahl + this.zufallsAugenzahlGenerieren();
       }
       return this.zahl;
+    }
+
+
+    /**
+     * Hauptmethode für Farben; Daten aus Array in Integern speichern
+     * @param pZahl
+     * @return
+     */
+    public void farbenZaehlen() {
+      farbeWuerfelnUndZuordnen();
+      //blau
+      for (int i = 0; i < this.gewuerfelteFarben[0].length; i++) {
+        this.blaus++;
+      }
+      //gelb
+      for (int i = 0; i < this.gewuerfelteFarben[1].length; i++) {
+        this.gelbs++;
+      }
+      //gruen
+      for (int i = 0; i < this.gewuerfelteFarben[2].length; i++) {
+        this.gruens++;
+      }
+      //rot
+      for (int i = 0; i < this.gewuerfelteFarben[3].length; i++) {
+        this.rots++;
+      }
+      //weiss
+      for (int i = 0; i < this.gewuerfelteFarben[4].length; i++) {
+        this.weisss++;
+      }
+      //schwarz
+      for (int i = 0; i < this.gewuerfelteFarben[5].length; i++) {
+        this.schwarzs++;
+      }
     }
 
     /**
@@ -93,73 +126,10 @@ public class Wuerfel {
             break;
         }
       }
-      System.out.println(this.gewuerfelteFarben);
+      //System.out.println(this.gewuerfelteFarben);
       return this.gewuerfelteFarben;
     }
 
-    /**
-     *
-     * @param pZahl
-     * @return
-     */
-    public void farbenZaehlen() {
-      //blau
-      for (int i = 0; i < this.gewuerfelteFarben[0].length; i++) {
-        this.blaus++;
-      }
-      //gelb
-      for (int i = 0; i < this.gewuerfelteFarben[1].length; i++) {
-        this.gelbs++;
-      }
-      //gruen
-      for (int i = 0; i < this.gewuerfelteFarben[2].length; i++) {
-        this.gruens++;
-      }
-      //rot
-      for (int i = 0; i < this.gewuerfelteFarben[3].length; i++) {
-        this.rots++;
-      }
-      //weiss
-      for (int i = 0; i < this.gewuerfelteFarben[4].length; i++) {
-        this.weisss++;
-      }
-      //schwarz
-      for (int i = 0; i < this.gewuerfelteFarben[5].length; i++) {
-        this.schwarzs++;
-      }
-    }
-
-    /**
-     * Zahl zu String umwandeln
-     * @return String, weil Java statisch ist.
-     */
-    public String zahlZuString(int pZahl) {
-        int augenzahl = pZahl;
-
-        switch (augenzahl) {
-          case 1:
-            this.augenzahlString = "eins";
-            break;
-          case 2:
-            this.augenzahlString = "zwei";
-            break;
-          case 3:
-            this.augenzahlString = "drei";
-            break;
-          case 4:
-            this.augenzahlString = "vier";
-            break;
-          case 5:
-            this.augenzahlString = "fünf";
-            break;
-          case 6:
-            this.augenzahlString = "senchs";
-            break;
-          default:
-            break;
-        }
-        return this.augenzahlString;
-    }
 
     /**
      * Zufällige Farbe generieren
@@ -188,6 +158,54 @@ public class Wuerfel {
     public int zufallsZahl(int pUnteresLimit, int pOberesLimit) {
       int zahl = (int)Math.round(Math.random() * (pOberesLimit - pUnteresLimit));
       return zahl;
+    }
+
+    /**
+     * Die Anzahl der blauen Seiten ausgeben
+     * @return
+     */
+    public int getBlau() {
+      return this.blaus;
+    }
+
+    /**
+     * Die Anzahl der gelben Seiten ausgeben
+     * @return
+     */
+    public int getGelb() {
+      return this.gelbs;
+    }
+
+    /**
+     * Die Anzahl der grünen Seiten ausgeben
+     * @return
+     */
+    public int getGruen() {
+      return this.gruens;
+    }
+
+    /**
+     * Die Anzahl der roten Seiten ausgeben
+     * @return
+     */
+    public int getRot() {
+      return this.rots;
+    }
+
+    /**
+     * Die Anzahl der weißen Seiten ausgeben
+     * @return
+     */
+    public int getWeiss() {
+      return this.weisss;
+    }
+
+    /**
+     * Die Anzahl der schwarzen Seiten ausgeben
+     * @return
+     */
+    public int getSchwarz() {
+      return this.schwarzs;
     }
 
 }
