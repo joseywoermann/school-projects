@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Wuerfel
+comment1.params=
+comment1.target=Wuerfel()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Wuerfel\r\n
+comment2.params=
+comment2.target=int\ augenZahlWuerfeln()
+comment2.text=\r\n\ W\u00FCrfel\ 9\ mal\ w\u00FCrfeln\r\n\ @param\ pZahl\r\n\ @return\ int\r\n
+comment3.params=
+comment3.target=java.lang.String[][]\ farbeWuerfelnUndZuordnen()
+comment3.text=\r\n\ 9\ Farben\ w\u00FCrfeln\ &\ zurodnen\r\n\ @param\ pZahl\r\n\ @return\ String[]\r\n
+comment4.params=pZahl
+comment4.target=java.lang.String\ zahlZuString(int)
+comment4.text=\r\n\ Zahl\ zu\ String\ umwandeln\r\n\ @return\ String,\ weil\ Java\ statisch\ ist.\r\n
+comment5.params=
+comment5.target=java.lang.String\ zufallsFarbeGenerieren()
+comment5.text=\r\n\ Zuf\u00E4llige\ Farbe\ generieren\r\n\ @return\ String\r\n
+comment6.params=
+comment6.target=int\ zufallsAugenzahlGenerieren()
+comment6.text=\r\n\ Zuf\u00E4llige\ Zahl\ generieren\r\n\ @return\r\n
+comment7.params=pUnteresLimit\ pOberesLimit
+comment7.target=int\ zufallsZahl(int,\ int)
+comment7.text=\r\n\ Eine\ zuf\u00E4llige\ ganze\ Zahl\ zwischen\ 2\ Zahlen\ generieren.\r\n\ @param\ pUnteresLimit\ Die\ niedrigste\ m\u00F6glich\ Zahl.\r\n\ @param\ pOberesLimit\ Die\ h\u00F6chste\ m\u00F6glich\ Zahl.\r\n
+numComments=8

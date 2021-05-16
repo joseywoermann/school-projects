@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Aufgabe
+comment1.params=
+comment1.target=Aufgabe()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Aufgabe\r\n
+comment2.params=
+comment2.target=java.lang.String\ zufallsAufgabeAussuchen()
+comment3.params=
+comment3.target=void\ test()
+comment4.params=pAugenzahl\ pBlau\ pGelb\ pGruen\ pRot\ pWeiss\ pSchwarz
+comment4.target=void\ aufgabeAuswerten(int,\ int,\ int,\ int,\ int,\ int,\ int)
+comment4.text=\r\n\ Auswerten,\ ob\ der\ Spieler\ die\ Aufgabe\ erf\u00FCllt\ hat\r\n\ @param\ pAugenzahl\ int\r\n
+comment5.params=pZahl
+comment5.target=java.lang.String\ zahlZuString(int)
+comment5.text=\r\n\ Zahl\ zu\ String,\ da\ im\ Array\ nur\ Strings\ sind\r\n\ @return\ String,\ weil\ Java\ statisch\ ist.\r\n
+numComments=6

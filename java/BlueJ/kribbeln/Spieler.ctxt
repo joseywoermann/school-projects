@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Spieler
+comment1.params=pAufgabe\ pWuerfel
+comment1.target=Spieler(Aufgabe,\ Wuerfel)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Spieler\r\n
+comment2.params=pGegner
+comment2.target=void\ gegnerFestlegen(Spieler)
+comment2.text=\r\n\ Gegner\ kann\ nicht\ im\ Konstruktor\ festgelegt\ werden,\ deshalb\ hier.\r\n\ @param\ pGegner\r\n
+comment3.params=
+comment3.target=void\ aufgabeStarten()
+comment3.text=\r\n\ Aufgabe\ "aussuchen"\ und\ starten\ (Start-Methode)\r\n
+comment4.params=
+comment4.target=void\ aufgabeDurchfuehren()
+comment4.text=\r\n\ Hauptmethode\ f\u00FCr\ Spieler\r\n
+comment5.params=augenzahl
+comment5.target=void\ ergebnisseWeiterleiten(int)
+comment5.text=\r\n\ Ergebnisse\ an\ die\ Aufgabe\ f\u00FCr\ die\ Auswertung\ weiterleiten\r\n\ @param\ pFarbe\r\n\ @param\ pAnzahlFarbe\r\n
+comment6.params=
+comment6.target=void\ platzierungBerechnen()
+comment6.text=\r\n\ Pr\u00FCfen,\ welcher\ Spieler\ mehr\ Punkte\ hat,\ und\ die\ Platzierungen\ anpassen\r\n
+comment7.params=
+comment7.target=int\ getPunktestand()
+comment7.text=\r\n\ Den\ Punktestand\ dieses\ Spielers\ ausgeben\r\n\ @return\ integer\r\n
+comment8.params=pPunkte
+comment8.target=void\ setPlatzierung(int)
+comment8.text=\r\n\ Die\ Platzierung\ f\u00FCr\ eine\ Spieler\ festlegen.\r\n\ @param\ pPunkte\r\n
+numComments=9
