@@ -40,5 +40,12 @@ public class Topf
    {
     this.einsatz = this.einsatz + einsatz;
    }
-
+   /**
+    *
+    * Gibt an, wieviel im Topf liegt
+    */
+   public int einsatzAngeben()
+   {
+    return this.einsatz;
+   }
 }

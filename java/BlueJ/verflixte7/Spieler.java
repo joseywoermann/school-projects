@@ -1,12 +1,6 @@
 /**
  * Klasse Spieler mit Fehlern
- *
- * @author David Tepa�e
- * @version 01
- *
- * in dieser Klasse ist ein Fehler. Sie stimmt nicht mit
- * der Beschreibung unseres Spiels �berein! Finden und korrigieren sie ihn.
- *
+ * TODO: Wenn Spieler B gleich viele Würfe hat wie A, muss das Spiel beendet werden.
  */
 
 
@@ -16,9 +10,10 @@ public class Spieler
   * Eine Person kennt zwei W�rfel und den Topf:
   */
 
-   private   Wuerfel wuerfel1;
-   private   Wuerfel wuerfel2;
-   private   Topf topf;
+   private  Wuerfel wuerfel1;
+   private  Wuerfel wuerfel2;
+   private  Topf topf;
+   private Spieler gegner;
 
   /**
   * Hier folgen die Attribute der Klasse Person:
@@ -29,6 +24,7 @@ public class Spieler
    private int vermoegen;
    private int wurfAnzahl;
    private int pPunkte;
+   private boolean hatElfGewuerfelt;
 
    /**
     * Konstruktor f�r Objekte der Klasse Spieler
@@ -40,8 +36,12 @@ public class Spieler
       this.wuerfel2 = pWuerfel2;
       this.topf = pTopf;
       this.vermoegen = 1000;
+      this.hatElfGewuerfelt = false;
     }
 
+    public void setGegner(Spieler pGegner) {
+      this.gegner = pGegner;
+    }
    /**
     * Die bis dahin erreichte Punktesumme wird zur�ckgegeben.
     *
@@ -86,19 +86,37 @@ public class Spieler
     * Führt die Methode "rollen()" bei 2 Würfeln aus und addiert die Augenzahl
     */
   public void wuerfeln () {
-    wuerfel1.rollen();
-    wuerfel2.rollen();
 
-    pPunkte = wuerfel1.punktzahlAngeben() + wuerfel2.punktzahlAngeben();
+    // Test ob der Spieler Einsatz gesetzt hat.
+    if (this.topf.einsatzAngeben() == 0) {
+      System.out.println("Spiel kann ohne Einsatz nicht gestartet werden.");
+    } else {
 
-    if (pPunkte == 7) {
-      pPunkte = pPunkte - 7;
+      // Test ob der Spieler im letzten Zug eine 11 gewürfelt hat
+      if (this.hatElfGewuerfelt == true) {
+        System.out.println("Der andere Spieler ist am Zug!");
+      } else {
+        //gegner.hatElfGewuerfelt = false;
+        setHatElfGewuerfelt(false);
+        wuerfel1.rollen();
+        wuerfel2.rollen();
+
+        // Würfelergebnis aus 2 Würfeln
+        pPunkte = wuerfel1.punktzahlAngeben() + wuerfel2.punktzahlAngeben();
+        // Wenn der Spieler eine 11 gewürfelt hat, Punkte abziehen
+        if (pPunkte == 11) {
+          this.hatElfGewuerfelt = true;
+          pPunkte = this.punktestandAngeben() - 11;
+          System.out.println("Zug beendet, der andere Spieler ist am Zug!");
+        } else {
+          pPunkte = this.punktestandAngeben() + pPunkte;
+        }
+
+        this.punkte = pPunkte;
+        pPunkte = 0;
+        this.wurfAnzahl++;
+      }
     }
-
-    this.punkte = this.punktestandAngeben() + pPunkte;
-    pPunkte = 0;
-    this.wurfAnzahl++;
-    System.out.println("Zug beendet, der andere Spieler ist am Zug!");
   }
 
    /**
@@ -107,5 +125,19 @@ public class Spieler
    public void setName (String neuerName)
    {
      this.name = neuerName;
+   }
+
+   /**
+    * Testet, ob der Spieler eine "11-Sperre" hat
+    */
+   public void getHatElfGewuerfelt() {
+     return this.hatElfGewuerfelt
+   }
+
+   /**
+    * Setzt die "11-Sperre" beim Gegner zurück
+    */
+   public void setHatElfGewuerfelt(boolean pWert) {
+     gegner.hatElfGewuerfelt = pWert;
    }
 }

@@ -47,7 +47,7 @@ public class Wuerfel
     */
    public void rollen ()
    {
-      this.punkte = zufallsZahlAusgeben(6);
+      this.punkte = zufallsZahlAusgeben(10);
    }
 
 }
