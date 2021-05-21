@@ -19,7 +19,7 @@
         {
             "rot",
             "eins",
-            "unterschiedlich",
+            "mindestens",
             "Würfele mindestens einmal rot."
         },
         {
@@ -27,8 +27,14 @@
             "drei",
             "gleich",
             "Würfele dreimal blau"
-        }/*,
+        },
         {
+            "grün",
+            "acht",
+            "gleich",
+            "Würfele achtmal grün"
+        }/*,
+        {         // prinzipiell möglich, aber kompliziert zu implementieren
             "egal",
             "zwei",
             "gleich",
@@ -46,7 +52,7 @@
 
     // Zufällige Aufgabe ausgeben
     public String zufallsAufgabeAussuchen() {
-      zahl = (int)Math.round(Math.random() * (2 - 0));
+      zahl = (int)Math.round(Math.random() * (1 - 0));
       aufgabenstellung = aufgaben[zahl][3];
       this.aufgabe = aufgaben[zahl];
 
@@ -61,8 +67,6 @@
 
       aktuelleAufgabe = this.aufgabe;
       anzahlWuerfeBenoetigteFarbeString = aktuelleAufgabe[0];
-
-
       //System.out.println(anzahlWuerfeBenoetigteFarbeString);
 
       switch (anzahlWuerfeBenoetigteFarbeString) {
@@ -89,10 +93,10 @@
       }
       //System.out.println(zahlZuString(anzahlWuerfeBenoetigteFarbe));
 
-      if (anzahlWuerfeBenoetigteFarbe >= stringZuZahl(aktuelleAufgabe[1])) {
-        System.out.println("Du hast deine Aufgabe erfolgreich erfüllt, " + anzahlWuerfeBenoetigteFarbe + " " + aktuelleAufgabe[0] + "e Felder.");
+      if (anzahlWuerfeBenoetigteFarbe == stringZuZahl(aktuelleAufgabe[1])) {
+        System.out.println("Du hast deine Aufgabe erfolgreich erfüllt,\ndu hattest " + anzahlWuerfeBenoetigteFarbe + " " + aktuelleAufgabe[0] + "e Felder.\nDie Augenzahl beträgt " + pAugenzahl + ".");
       } else {
-        System.out.println("Du hast deine Aufgabe nicht erfüllt, du hattest " + anzahlWuerfeBenoetigteFarbe + " " + aktuelleAufgabe[0] + "e Felder.");
+        System.out.println("Du hast deine Aufgabe nicht erfüllt,\ndu hattest " + anzahlWuerfeBenoetigteFarbe + " " + aktuelleAufgabe[0] + "e Felder.\nDie Augenzahl beträgt " + pAugenzahl + ".");
       }
     }
 

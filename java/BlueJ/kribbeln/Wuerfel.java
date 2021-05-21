@@ -45,7 +45,7 @@ public class Wuerfel {
      * Constructor for objects of class Wuerfel
      */
     public Wuerfel() {
-      
+
     }
 
     /**
@@ -70,27 +70,44 @@ public class Wuerfel {
       farbeWuerfelnUndZuordnen();
       //blau
       for (int i = 0; i < this.gewuerfelteFarben[0].length; i++) {
-        this.blaus++;
+        if (this.gewuerfelteFarben[0][i] == "blau") {
+          this.blaus++;
+        }
       }
+
       //gelb
       for (int i = 0; i < this.gewuerfelteFarben[1].length; i++) {
-        this.gelbs++;
+        if (this.gewuerfelteFarben[1][i] == "gelb") {
+          this.gelbs++;
+        }
       }
+
       //gruen
       for (int i = 0; i < this.gewuerfelteFarben[2].length; i++) {
-        this.gruens++;
+        if (this.gewuerfelteFarben[2][i] == "grün") {
+          this.gruens++;
+        }
       }
+
       //rot
       for (int i = 0; i < this.gewuerfelteFarben[3].length; i++) {
-        this.rots++;
+        if (this.gewuerfelteFarben[3][i] == "rot") {
+          this.rots++;
+        }
       }
+
       //weiss
       for (int i = 0; i < this.gewuerfelteFarben[4].length; i++) {
-        this.weisss++;
+        if (this.gewuerfelteFarben[4][i] == "weiß") {
+          this.weisss++;
+        }
       }
+
       //schwarz
       for (int i = 0; i < this.gewuerfelteFarben[5].length; i++) {
-        this.schwarzs++;
+        if (this.gewuerfelteFarben[5][i] == "schwarz") {
+          this.schwarzs++;
+        }
       }
     }
 
@@ -100,9 +117,17 @@ public class Wuerfel {
      * @return String[]
      */
     public String[][] farbeWuerfelnUndZuordnen() {
-      for (int i = 0; i < 9; i++) {
+      for (int i = 0; i < 9; i++) { // 9mal würfeln
         String farbe = this.zufallsFarbeGenerieren();
         // gewürfelte Farbe zu Array zuordnen
+        /**
+         * BUG: Aktuell werden die farben an der Position ins Array gestellt,
+         * der wievielte Wurf es ist (ergobt ohne Beispiel keinen Sinn)
+         * Beispiel:
+         * der 3. Wurf ist "rot" => "rot" wird an die dritte Stelle ins Array gestellt, nicht an die erste.
+         * Das sorgt dafür, dass wenn z.B. alle Würfe "rot" sind, dass das Array überfließen könnte.
+         * // EDIT: Der Bug ist egal, weil die subarrays 9 lang sind
+         */
         switch (farbe) {
           case "blau":
             this.gewuerfelteFarben[0][i] = farbe;
@@ -159,6 +184,9 @@ public class Wuerfel {
       int zahl = (int)Math.round(Math.random() * (pOberesLimit - pUnteresLimit));
       return zahl;
     }
+
+
+    // get-Methoden
 
     /**
      * Die Anzahl der blauen Seiten ausgeben

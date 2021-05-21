@@ -1,3 +1,5 @@
+//import java.util.Scanner;
+
 public class Spieler {
 
     private int punktestand = 0;
@@ -5,6 +7,7 @@ public class Spieler {
     private int augenzahl = 0;
     private String aufgabenstellung = null;
     private String ergebnis = null;
+    //private boolean nochmalWuerfelnJaNein = true;
 
     private Spieler gegner;
     private Aufgabe aufgabe;
@@ -32,7 +35,7 @@ public class Spieler {
      */
     public void aufgabeStarten() {
       this.aufgabenstellung = aufgabe.zufallsAufgabeAussuchen();
-      System.out.println(this.aufgabenstellung);
+      System.out.println("Deine Aufgabe: " + this.aufgabenstellung + " und versuche, eine möglichst hohe Auganzahl zu erreichen.");
       this.aufgabeDurchfuehren();
     }
 
@@ -42,10 +45,31 @@ public class Spieler {
     public void aufgabeDurchfuehren() {
       // Augenzahlen
       this.augenzahl = wuerfel.augenZahlWuerfeln();
+      System.out.println("Augenzahl: " + this.augenzahl);
+      // Farben & deren Anzahl
+      wuerfel.farbenZaehlen();
+
+      // Spieler fragen, ob er nochmal würfeln will, oder den Zug beenden will
+      System.out.println("Möchtest du nochmal würfel, um dein Ergebnis zu verbessern? Dies kann dein Ergebnis aber auch verschlechtern, wenn du dann deine Aufgabe nichtmehr erfüllen kannst.\nWenn du nochmal würfeln willst, führe die Methode \"nochmalWuerfeln()\" aus, wenn nicht, führe \"zugBeenden()\" aus");
+    }
+
+    // Wenn aufgerufen, soll nochmal gewürfelt werden
+    public void nochmalWuerfeln() {
+      // Augenzahlen
+      int augenzahlTMP = wuerfel.augenZahlWuerfeln();
+      this.augenzahl = this.augenzahl + augenzahlTMP;
       //System.out.println("Augenzahl: " + this.augenzahl);
       // Farben & deren Anzahl
       wuerfel.farbenZaehlen();
 
+      // ausgeben, was gerade gewürfelt wurde
+      System.out.println("Du hast gerade eine " + augenzahlTMP + " gewürfelt.");
+      // Farben ausgeben (erstmal testen)
+    }
+
+    // Auswerten
+    public void zugBeenden() {
+      // Ergebnisse zur Kopntrolle an Aufgabe weitergeben
       this.ergebnisseWeiterleiten(this.augenzahl);
     }
 

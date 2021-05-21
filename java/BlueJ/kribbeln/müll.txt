@@ -1,0 +1,20 @@
+// Den Spieler fragen, ob er Weiterwürfeln will
+// Scanner erzeugen um Nutzerinput zu bekommen
+/*Scanner scanner = new Scanner(System.in);
+
+// Das muss solange  gefragt werden, bis Nein eingegeben wurde
+while (this.nochmalWuerfelnJaNein == true) {
+  System.out.println("Möchtest du nochmal würfel, um dein Ergebnis zu verbessern? Dies kann dein Ergebnis aber auch verschlechtern, wenn du dann deine Aufgabe nichtmehr erfüllen kannst.\nJa/Nein");
+  String nochmalWuerfelnJaNeinTmp = scanner.nextLine();
+  if (nochmalWuerfelnJaNeinTmp == "Ja") {
+    // nochmal würfeln
+    this.nochmalWuerfelnJaNein = true;
+  } else if (nochmalWuerfelnJaNeinTmp == "Nein") {
+    // Zug beenden
+    scanner.close();
+    this.nochmalWuerfelnJaNein = false;
+    break;
+  } else {
+    System.out.println("Bitte gebe entweder Ja oder Nein ein.");
+  }
+}*/
