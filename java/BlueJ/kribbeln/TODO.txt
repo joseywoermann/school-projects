@@ -1,3 +1,0 @@
-- Punktestand berechnen
-- Ergebnis erstellen
-- nach jedem Wurf das Würfelergebnis ausgeben
