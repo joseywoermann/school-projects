@@ -8,7 +8,6 @@ public class Waffe {
      * Konstruktor für Objekte der Klasse Waffe
      */
     public Waffe(int pBonus, String pMaterial, int pMagie) {
-        // Instanzvariable initialisieren
         this.bonus      = pBonus;
         this.material   = pMaterial;
         this.magie      = pMagie;
@@ -16,11 +15,9 @@ public class Waffe {
 
     /**
      * Berechnet den Bonus der Waffe.
-     *
-     * @return        der berechnete Bonus der Waffe
      */
     public int bonusBerechnen() {
-        int berechneterBonus = 0; // Material & Magie verrechnen
+        int berechneterBonus = 100; // Material & Magie verrechnen
         return berechneterBonus;
     }
 }
