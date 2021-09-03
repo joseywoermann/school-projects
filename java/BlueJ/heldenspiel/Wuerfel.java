@@ -1,19 +1,10 @@
+// https://gist.github.com/joseywoermann/ea15be3f64fe093fcca1712744836141
 public class Wuerfel {
 
-    private int anzahlSeiten;
-
     /**
-     * Konstruktor für Objekte der Klasse Wuerfel.
+     * Eine zufällige ganze Zahl zwischen 0 und der angegebenen Seitenzahl generieren.
      */
-    public Wuerfel(int pAnzahlSeiten) {
-        this.anzahlSeiten = pAnzahlSeiten;
-    }
-
-    /**
-     * Eine zufällige ganze Zahl zwischen 0 und der anzahl der Seiten generieren.
-     */
-    public int wuerfeln() {
-        int zahl = (int)Math.round(Math.random() * (this.anzahlSeiten - 0));
-        return zahl;
+    public static int wuerfeln(int pSeitenzahl) {
+        return (int) Math.round(Math.random() * (pSeitenzahl - 0));
     }
 }

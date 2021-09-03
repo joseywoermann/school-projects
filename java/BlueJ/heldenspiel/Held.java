@@ -4,24 +4,23 @@ public class Held {
     protected int       staerke             = 0;
     protected int       angriffswert        = 0;
     protected int       lebenspunkte        = 0;
-    protected Waffe     waffe               = null;
-
     protected int       sollLebenspunkte    = 0;
+    protected Waffe     waffe               = null;
 
     /**
      * Konstruktor für Objekte der Klasse Held.
      */
     public Held(String pName, int pStaerke, int pLebenspunkte, Waffe pWaffe) {
-        if (pStaerke < 0 || pLebenspunkte < 0) {
-            throw new Error("Lebenspunkte oder Stärke können nicht weniger als 0 sein.");
+        if (pStaerke =< 0 || pLebenspunkte =< 0) {
+            throw new Error("Lebenspunkte oder Stärke müssen größer als 0 sein.");
         }
 
         this.name               = pName;
         this.staerke            = pStaerke;
         this.lebenspunkte       = pLebenspunkte;
-        this.waffe              = pWaffe;
         this.sollLebenspunkte   = pLebenspunkte;
         this.angriffswert       = angriffswertBerechnen();
+        this.waffe              = pWaffe;
     }
 
     /**
@@ -35,7 +34,7 @@ public class Held {
      * Berechnet den Angriffswert.
      */
     public int angriffswertBerechnen() {
-        // stärke und schadensbonus der waffe
+        // Stärke und Schadensbonus der Waffe
         return (this.staerke * this.waffe.getBonus());
     }
 }

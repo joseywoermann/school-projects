@@ -20,10 +20,13 @@ public class Waffe {
         // prüfen, ob das Material gültig ist
         materialUeberpruefen(pMaterial);
 
+        if (pMagie =< 0) {
+            throw new Error("Magie muss größer als 0 sein.");
+        }
+
         this.material   = pMaterial;
         this.magie      = pMagie;
-
-        this.bonus = bonusBerechnen();
+        this.bonus      = bonusBerechnen();
     }
 
     /**
@@ -46,6 +49,7 @@ public class Waffe {
     public int getBonus() {
         return this.bonus;
     }
+
 
     /**
      * Überprüft, ob das Material verwendet werden kann

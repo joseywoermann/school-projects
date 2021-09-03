@@ -1,14 +1,14 @@
 public class Zauberer extends Held {
 
-    private int zauberkraft;
+    private int zauberkraft = 0;
 
     /**
      * Konstruktor für Objekte der Klasse Zuaberer
      */
     public Zauberer(String pName, int pStaerke, int pLebenspunkte, Waffe pWaffe, int pZauberkraft) {
         super(pName, pStaerke, pLebenspunkte, pWaffe);
-        if (pZauberkraft < 0) {
-            throw new Error("Zauberkraft kann nicht weniger als 0 sein.");
+        if (pZauberkraft =< 0) {
+            throw new Error("Zauberkraft muss größer als 0 sein.");
         }
         this.zauberkraft = pZauberkraft;
     }

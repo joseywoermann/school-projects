@@ -7,8 +7,8 @@ public class Monster {
      * Konstruktor für Objekte der Klasse Monster
      */
     public Monster(int pAngriffswert, int pLebenspunkte) {
-        if (pAngriffswert < 0 || pLebenspunkte < 0) {
-            throw new Error("Lebenspunkte oder Angriffswert können nicht weniger als 0 sein.");
+        if (pAngriffswert =< 0 || pLebenspunkte =< 0) {
+            throw new Error("Lebenspunkte oder Angriffswert müssen größer als 0 sein.");
         }
         this.angriffswert = pAngriffswert;
         this.lebenspunkte = pLebenspunkte;
@@ -17,12 +17,11 @@ public class Monster {
     /**
      * Setzt die Lebenspunkte auf den angegebenen Integer. (Muss >= 0 sein)
      */
-    public void setLebenspunkte(int pLp) {
-        if (pLp >= 0) {
-            this.lebenspunkte = pLp;
-        } else {
-            throw new Error("Lebenspunkte können nicht weniger als 0 sein.");
+    public void setLebenspunkte(int pLebenspunkte) {
+        if (pLebenspunkte =< 0) {
+            throw new Error("Lebenspunkte muss größer als 0 sein.");
         }
+        this.lebenspunkte = pLebenspunkte;
     }
 
     /**
