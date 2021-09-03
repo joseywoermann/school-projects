@@ -63,7 +63,7 @@ public class Waffe {
             }
         }
         if (gueltigesMaterial == false) {
-            throw new Error("Ungültiges Material. | Mögliche Materiale: 'Bambus', 'Holz', 'Stein', 'Aluminium', 'Eisen'.");
+            throw new Error("Ungültiges Material.\nMögliche Materialien: 'Bambus', 'Holz', 'Stein', 'Aluminium', 'Eisen'.");
         }
     }
 }
