@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=Kreuzfahrtschiff
-comment1.params=pMaxSpeed\ pTankGroesse\ pID\ pAnzahlZimmer
-comment1.target=Kreuzfahrtschiff(float,\ float,\ java.lang.String,\ int)
-comment2.params=
-comment2.target=void\ ablegen()
-comment3.params=
-comment3.target=void\ anlegen()
-numComments=4
