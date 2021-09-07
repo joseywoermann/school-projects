@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=Fahrzeug
-comment1.params=pMaxSpeed\ pTankGroesse\ pID
-comment1.target=Fahrzeug(float,\ float,\ java.lang.String)
-comment2.params=
-comment2.target=void\ fahre()
-comment3.params=richtung
-comment3.target=void\ lenke(char)
-numComments=4
