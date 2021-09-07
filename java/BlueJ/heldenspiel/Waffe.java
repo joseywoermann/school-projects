@@ -5,11 +5,11 @@ public class Waffe {
     private int     magie       = 0;
 
     private String[] materialWerte = {
-        "Bambus",       // 1
-        "Holz",         // 2
-        "Stein",        // 3
-        "Aluminium",    // 4
-        "Eisen"         // 5
+        "Bambus",       // Bonus: 1
+        "Holz",         // Bonus: 2
+        "Stein",        // Bonus: 3
+        "Aluminium",    // Bonus: 4
+        "Eisen"         // Bonus: 5
     };
 
     /**
@@ -20,7 +20,7 @@ public class Waffe {
         // prüfen, ob das Material gültig ist
         materialUeberpruefen(pMaterial);
 
-        if (pMagie =< 0) {
+        if (pMagie <= 0) {
             throw new Error("Magie muss größer als 0 sein.");
         }
 
