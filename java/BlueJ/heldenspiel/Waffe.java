@@ -17,12 +17,7 @@ public class Waffe {
      */
     public Waffe(String pMaterial, int pMagie) {
 
-        // prüfen, ob das Material gültig ist
-        materialUeberpruefen(pMaterial);
-
-        if (pMagie <= 0) {
-            throw new Error("Magie muss größer als 0 sein.");
-        }
+        parameterValidieren(pMaterial, pMagie);
 
         this.material   = pMaterial;
         this.magie      = pMagie;
@@ -50,20 +45,27 @@ public class Waffe {
         return this.bonus;
     }
 
+    /**
+     * Überprüft, ob alle Parameter gültig sind.
+     */
+    private void parameterValidieren(String pMaterial, int pMagie) {
+        if (pMagie <= 0) {
+            throw new Error("Magie muss größer als 0 sein.");
+        }
+        if (materialUeberpruefen(pMaterial) == false) {
+            throw new Error("Ungültiges Material.\nMögliche Materialien: 'Bambus', 'Holz', 'Stein', 'Aluminium', 'Eisen'.");
+        }
+    }
 
     /**
      * Überprüft, ob das Material verwendet werden kann
      */
-    private void materialUeberpruefen(String pMaterial) {
-        boolean gueltigesMaterial = false;
+    private boolean materialUeberpruefen(String pMaterial) {
         for (int i  = 0; i < materialWerte.length; i++) {
             if (materialWerte[i] == pMaterial) {
-                gueltigesMaterial = true;
-                break;
+                return true;
             }
         }
-        if (gueltigesMaterial == false) {
-            throw new Error("Ungültiges Material.\nMögliche Materialien: 'Bambus', 'Holz', 'Stein', 'Aluminium', 'Eisen'.");
-        }
+        return false;
     }
 }

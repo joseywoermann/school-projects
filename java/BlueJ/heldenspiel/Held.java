@@ -1,19 +1,18 @@
 public class Held {
 
-    protected String    name                = null;
-    protected int       staerke             = 0;
-    protected int       angriffswert        = 0;
-    protected int       lebenspunkte        = 0;
-    protected int       sollLebenspunkte    = 0;
-    protected Waffe     waffe               = null;
+    protected String        name                = null;
+    protected int           staerke             = 0;
+    protected int           angriffswert        = 0;
+    protected int           lebenspunkte        = 0;
+    protected int           sollLebenspunkte    = 0;
+    protected Waffe         waffe               = null;
 
     /**
      * Konstruktor für Objekte der Klasse Held.
      */
     public Held(String pName, int pStaerke, int pLebenspunkte, Waffe pWaffe) {
-        if (pStaerke <= 0 || pLebenspunkte <= 0) {
-            throw new Error("Lebenspunkte oder Stärke müssen größer als 0 sein.");
-        }
+
+        parameterValidieren(pName, pStaerke, pLebenspunkte, pWaffe);
 
         this.name               = pName;
         this.staerke            = pStaerke;
@@ -25,14 +24,26 @@ public class Held {
 
     /**
      * Greift ein Monster an.
-     * Die Partei mit dem höchsten Angriffswert gewinnt.
-     * Helden können ihren AW mithilfe einer Waffe steigern.
      */
     public void angreifen(Monster pGegner) {
-        if (pGegner.getAngriffswert() > this.angriffswert) { // Monster gewinnt
-            this.lebenspunkteReduzieren();
-        } else if (pGegner.getAngriffswert() < this.angriffswert) { // Spieler gewinnt
-            pGegner.lebenspunkteReduzieren();
+        Kampfregel.kampf(this, pGegner);
+    }
+
+    /**
+     * Überprüft, ob alle Parameter gültig sind.
+     */
+    private void parameterValidieren(String pName, int pStaerke, int pLebenspunkte, Waffe pWaffe) {
+        if (pName == null) {
+            throw new Error("Jeder Held benötigt einen Namen.");
+        }
+        if (pStaerke <= 0) {
+            throw new Error("Stärke muss größer als 0 sein.");
+        }
+        if (pLebenspunkte <= 0) {
+            throw new Error("Lebenspunkte müssen größer als 0 sein.");
+        }
+        if (pWaffe == null) {
+            throw new Error("Jeder Held benötigt eine Waffe.");
         }
     }
 
@@ -45,12 +56,16 @@ public class Held {
     }
 
     /**
-     * Reduziert die Lebenspunkte um 1
+     * Gibt die lebenspunkte des Monsters zurück
+     */
+    public int getLebenspunkte() {
+        return this.lebenspunkte;
+    }
+
+    /**
+     * Reduziert die Lebenspunkte um 1.
      */
     public void lebenspunkteReduzieren() {
-        if ((this.lebenspunkte - 1) < 0) {
-            System.out.println("Held ist tot, Monster hat gewonnen.");
-        }
         this.lebenspunkte--;
     }
 }
