@@ -11,7 +11,6 @@ public class Kampfregel {
                 System.out.println("Spiel ist beendet");
             } else {
                 pSpieler.lebenspunkteReduzieren();
-                Kampfregel.debug("Monster ");
             }
 
         // Spieler gewinnt
@@ -20,16 +19,11 @@ public class Kampfregel {
                 System.out.println("Das Monster ist tot, Held " + pSpieler.name + " hat gewonnen.");
             } else {
                 pGegner.lebenspunkteReduzieren();
-                Kampfregel.debug("");
             }
 
         // Keiner gewinnt
         } else {
             throw new Error("Beide Parteien haben den gleichen Angriffswert, (" + pSpieler.angriffswert + ").\nDas Bedeutet, dass es keinen Gewinner geben kann.");
         }
-    }
-
-    private static void debug(String pData) {
-        System.out.println("[DEBUG]: " + pData);
     }
 }

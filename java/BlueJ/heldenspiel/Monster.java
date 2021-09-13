@@ -7,7 +7,9 @@ public class Monster {
      * Konstruktor für Objekte der Klasse Monster
      */
     public Monster(int pAngriffswert, int pLebenspunkte) {
+        
         parameterValidieren(pAngriffswert, pLebenspunkte);
+
         this.angriffswert = pAngriffswert;
         this.lebenspunkte = pLebenspunkte;
     }

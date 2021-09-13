@@ -1,11 +1,11 @@
 public class Held {
 
-    protected String        name                = null;
-    protected int           staerke             = 0;
-    protected int           angriffswert        = 0;
-    protected int           lebenspunkte        = 0;
-    protected int           sollLebenspunkte    = 0;
-    protected Waffe         waffe               = null;
+    protected String    name                = null;
+    protected int       staerke             = 0;
+    protected int       angriffswert        = 0;
+    protected int       lebenspunkte        = 0;
+    protected int       sollLebenspunkte    = 0;
+    protected Waffe     waffe               = null;
 
     /**
      * Konstruktor für Objekte der Klasse Held.
@@ -48,15 +48,15 @@ public class Held {
     }
 
     /**
-     * Berechnet den Angriffswert.
+     * Berechnet den Angriffswert des Helden.
+     * Die Stärke wird mit dem Bonus der Waffemultipliziert, um das Ergebnis zu errechnen.
      */
     public int angriffswertBerechnen() {
-        // Stärke und Schadensbonus der Waffe
         return (this.staerke * this.waffe.getBonus());
     }
 
     /**
-     * Gibt die lebenspunkte des Monsters zurück
+     * Gibt die lebenspunkte des Helden zurück
      */
     public int getLebenspunkte() {
         return this.lebenspunkte;

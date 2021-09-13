@@ -1,4 +1,3 @@
-// https://gist.github.com/joseywoermann/ea15be3f64fe093fcca1712744836141
 public class Wuerfel {
 
     /**
