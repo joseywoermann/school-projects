@@ -9,7 +9,6 @@ public class Krieger extends Held {
         super(pName, pStaerke, pLebenspunkte, pWaffe);
 
         parameterValidieren(pAusdauer);
-
         this.ausdauer = pAusdauer;
         this.angriffswert *= this.ausdauer;
     }

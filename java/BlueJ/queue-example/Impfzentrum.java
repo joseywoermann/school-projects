@@ -17,7 +17,9 @@ public class Impfzentrum {
      * @param pPatient
      */
     public void patientenAufnehmen(Mensch pPatient) {
-        this.warteschlange.enqueue(pPatient);
+        if (datenUeberpruefen(pPatient) == true) {
+            this.warteschlange.enqueue(pPatient);
+        }
     }
 
     /**
@@ -25,16 +27,17 @@ public class Impfzentrum {
      */
     public void impfen() {
 
+        if (this.warteschlange.isEmpty()) return;
+
         Mensch patient = this.warteschlange.front();
 
-        if (datenUeberpruefen(patient) != true) return;
+        int impfungen = (patient.getAnzahlImpfungen() + 1);
 
-        int impfungen = patient.getAnzahlImpfungen();
-
-        patient.setAnzahlImpfungen(impfungen + 1);
-        System.out.println(patient.getName() + " hat die " + (impfungen + 1) + ". Impfung erhalten.");
+        patient.setAnzahlImpfungen(impfungen );
+        System.out.println(patient.getName() + " hat die " + impfungen + ". Impfung erhalten.");
 
         this.warteschlange.dequeue();
+
     }
 
 
@@ -44,19 +47,15 @@ public class Impfzentrum {
      * @return
      */
     private boolean datenUeberpruefen(Mensch pPatient) {
-
-        boolean impfberechtigt = true;
-
         if (pPatient.getAlter() < this.altersgrenze) {
             System.out.println("Dieser Mensch ist nicht alt genug.");
-            impfberechtigt = false;
+            return false;
         }
 
         if (pPatient.getAnzahlImpfungen() >= 2) {
             System.out.println("Dieser Mensch hat schon 2 Impfungen erhalten.");
-            impfberechtigt = false;
+            return false;
         }
-
-        return impfberechtigt;
+        return true;
     }
 }
