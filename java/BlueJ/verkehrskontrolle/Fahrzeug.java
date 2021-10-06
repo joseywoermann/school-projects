@@ -1,4 +1,4 @@
-public class Fahrzeug {
+    public class Fahrzeug {
     private String modell;
     private String farbe;
     private String kennzeichen;
@@ -8,6 +8,13 @@ public class Fahrzeug {
         this.modell = pModell;
         this.farbe = pFarbe;
         this.kennzeichen = pKennzeichen;
+        
+        // 25% Wahrscheinlichkeit dass es nicht verkehrstauglich ist
+        if (Util.randomInt(100) < 25) {
+            this.setVerkehrstauglichkeit(false);
+        } else {
+            this.setVerkehrstauglichkeit(true);
+        }
     }
 
     public void setVerkehrstauglichkeit(boolean pVerkehrstauglich) {
@@ -24,5 +31,9 @@ public class Fahrzeug {
 
     public String getKennzeichen() {
         return this.kennzeichen;
+    }
+    
+    public boolean getVerkehrstauglichkeit() {
+        return this.verkehrstauglich;
     }
 }
