@@ -4,13 +4,16 @@
     private String kennzeichen;
     private boolean verkehrstauglich;
 
+    /**
+     * Ein Fahrzeug
+     */
     public Fahrzeug(String pModell, String pFarbe, String pKennzeichen) {
         this.modell = pModell;
         this.farbe = pFarbe;
         this.kennzeichen = pKennzeichen;
         
-        // 25% Wahrscheinlichkeit dass es nicht verkehrstauglich ist
-        if (Util.randomInt(100) < 25) {
+        // 20% Wahrscheinlichkeit dass es nicht verkehrstauglich ist
+        if (Util.randomInt(100) < 20) {
             this.setVerkehrstauglichkeit(false);
         } else {
             this.setVerkehrstauglichkeit(true);
