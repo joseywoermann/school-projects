@@ -23,7 +23,7 @@ Diese Datenstruktur eignet sich für den gegebenen Anwendungszweck gut, da im vo
 | Steuerung                                       |
 |-------------------------------------------------|
 | anzahlLEDs: int                                 |
-| lichterkette: List<LED>                         |
+| lichterkette: List\<LED\>                       |
 | + Steuerung()                                   |
 | + leuchten01(): void                            |
 | + leuchten02(): void                            |
