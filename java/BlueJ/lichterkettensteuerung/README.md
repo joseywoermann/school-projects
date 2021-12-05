@@ -1,3 +1,5 @@
+[[Mirror]](https://gist.github.com/joseywoermann/ee4a2ac73afe6bbf5a3bf83309d262cd)
+
 # a)
 
 Eine Liste ist eine lineare Datenstruktur, die eine variable, nicht festgelegte Länge hat, und jede beliebige Art von Objekten aufnehmen kann (generisch). Außerdem gibt es einen `Zeiger`, welcher es dem Nutzer erlaubt, auf jedes beliebige Element zuzugreifen. Jedes Element einer Liste ist eine `Node`, welche wie ein Container um das eigentliche Content-Objekt agiert. Zusätzlich bietet sie einen Verweis auf den Nachfolger.
@@ -8,31 +10,28 @@ Diese Datenstruktur eignet sich für den gegebenen Anwendungszweck gut, da im vo
 
 -----
 
-<br>
-
-<br>
-
 # b)
 
-| LED                                                |
-|----------------------------------------------------|
-| leuchtet: boolean                                  |
-| + LED()|
-| + lichtAn(): void
+| LED                |
+|--------------------|
+| leuchtet: boolean  |
+| + LED()            |
+| + lichtAn(): void  |
 | + lichtAus(): void |
 
 
-| Steuerung                                                                                                                                                           |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| anzahlLEDs: int
-| lichterkette: List<LED>  |                                                                                                                        |
-| + Steuerung()|
-| + leuchten01(): void|
-| + leuchten02(): void|
-| + leuchten03(): void|
+| Steuerung                                       |
+|-------------------------------------------------|
+| anzahlLEDs: int                                 |
+| lichterkette: List<LED>                         |
+| + Steuerung()                                   |
+| + leuchten01(): void                            |
+| + leuchten02(): void                            |
+| + leuchten03(): void                            |
 | + lichterketteAnhaengen(List pLichtekette): void|
-| + getAnzahlLEDs(): int |
+| + getAnzahlLEDs(): int                          |
 
+-----
 
 # e)
 
