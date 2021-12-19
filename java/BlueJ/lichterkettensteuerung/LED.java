@@ -13,4 +13,8 @@ public class LED {
     public void lichtAus() {
         this.leuchtet = false;
     }
+    
+    public boolean istAn() {
+        return this.leuchtet;
+    }
 }

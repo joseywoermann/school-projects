@@ -5,9 +5,7 @@ public class Steuerung {
 
 
     // Eine Steuerung ohne Lichterkette wird generiert
-    public Steuerung() {
-
-    }
+    public Steuerung() {}
 
     // Alle LEDs der verwalteten Lichterketten leuchten
     public void leuchten01() {
@@ -18,8 +16,8 @@ public class Steuerung {
     public void leuchten02() {
         this.lichterkette.toFirst();
 
-        // Wenn keine LEDs vorhanden sidn, nichts machen
-        if (this.lichterkette.getContent().equals(null)) return;
+        // Wenn keine LEDs vorhanden sind, nichts machen
+        if (this.lichterkette.getContent() == null) return;
 
         boolean sollteLeuchten = true;
 
@@ -32,6 +30,7 @@ public class Steuerung {
             }
             this.lichterkette.next();
         }
+        this.showLEDs();
     }
 
     // Jede dritte LED der Lichtekette leuchtet
@@ -39,7 +38,7 @@ public class Steuerung {
         throw new Error("Nicht implementiert");
     }
 
-    // Die Lichtekette `pLichtekette` wird an die Lichterkette  der STeuerung angehängt. Die Anzahl der LEDs wird dementsprechend aktualisiert.
+    // Die Lichtekette `pLichtekette` wird an die Lichterkette  der Steuerung angehängt. Die Anzahl der LEDs wird dementsprechend aktualisiert.
     public void lichterketteAnhaengen(List<LED> pLichterkette) {
         this.lichterkette.concat(pLichterkette);
         this.anzahlLEDsAktualisieren();
@@ -49,16 +48,29 @@ public class Steuerung {
     public int getAnzahlLEDs() {
         return this.anzahlLEDs;
     }
+    
+    // gibt aus, welche LEDs an / aus sind
+    public void showLEDs() {
+        this.lichterkette.toFirst();
+        while(this.lichterkette.hasAccess()) {
+            if (this.lichterkette.getContent().istAn()) {
+                System.out.print("an ");
+            } else {
+                System.out.print("aus ");
+            }
+            this.lichterkette.next();
+        }
+    }
 
     // Aktualisiert die Anzahl der LEDs, die zur Zeit in der Liste enthalten sind.
     private void anzahlLEDsAktualisieren() {
         int anzahl = 0;
         this.lichterkette.toFirst();
-        while(this.lichterkette.current != this.lichterkette.last) {
+        while(this.lichterkette.hasAccess()) {
             anzahl++;
             this.lichterkette.next();
         }
         this.lichterkette.toFirst();
-        this.anzahlLEDs = (anzahl + 1);
+        this.anzahlLEDs = anzahl;
     }
 }
