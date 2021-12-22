@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Util
+comment1.params=pAdventskalender
+comment1.target=void\ adventskalenderAutomatischAuffuellen(Adventskalender)
+comment2.params=
+comment2.target=java.lang.String\ randomString()
+comment3.params=pSides
+comment3.target=int\ randomInt(int)
+comment4.params=
+comment4.target=void\ trennstrich()
+numComments=5

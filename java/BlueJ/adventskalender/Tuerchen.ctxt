@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Tuerchen
+comment1.params=pTag\ pInhalt
+comment1.target=Tuerchen(int,\ java.lang.String)
+comment2.params=
+comment2.target=int\ getTag()
+comment3.params=
+comment3.target=java.lang.String\ getInhalt()
+numComments=4

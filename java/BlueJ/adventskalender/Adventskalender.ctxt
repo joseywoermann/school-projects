@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Adventskalender
+comment1.params=
+comment1.target=Adventskalender()
+comment2.params=
+comment2.target=void\ tuerchenOeffnen()
+comment3.params=pInhalte
+comment3.target=void\ adventskalenderAuffuellen(java.lang.String[])
+comment4.params=
+comment4.target=void\ adventskalenderAutomatischAuffuellen()
+numComments=5
