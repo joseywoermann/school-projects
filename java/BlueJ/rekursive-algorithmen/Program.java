@@ -31,7 +31,7 @@ public class Program {
         int ergebnis = 0;
 
         for (int i = 0; i < x; i++) {
-            int tmp = random(i);
+            int tmp = random(6);
             if (tmp > ergebnis) {
                 ergebnis = tmp;
             }
