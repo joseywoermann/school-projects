@@ -44,6 +44,7 @@ public class Program {
 
         int gewuerfelt = random(6);
         int vorherigeWerte = maxFindenRekursiv(x - 1);
+        
 
         if (gewuerfelt > vorherigeWerte) {
             return gewuerfelt;

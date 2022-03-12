@@ -1,0 +1,7 @@
+class Program:
+    variables:
+        state: q0 | q1
+    methods:
+        analyze: -> string input
+          split string into array
+          bit by bit
