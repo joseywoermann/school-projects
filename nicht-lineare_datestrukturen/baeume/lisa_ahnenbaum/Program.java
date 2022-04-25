@@ -13,7 +13,7 @@ public class Program {
         this.ahnenbaum = new BinaryTree<Ahne>(new Ahne("Lisa", "Simpson", 'f'), b3, b6);
     }
 
-
+    // PREORDER
     public void startPreorderAusgabe() {
         this.preorderAusgabe(this.ahnenbaum);
     }
@@ -24,6 +24,36 @@ public class Program {
             System.out.println(pKnoten.getContent().getVorname() + " " + pKnoten.getContent().getNachname());
             preorderAusgabe(pKnoten.getLeftTree());
             preorderAusgabe(pKnoten.getRightTree());
+        }
+    }
+
+
+    // POSTORDER
+    public void startPostorderAusgabe() {
+        this.postorderAusgabe(this.ahnenbaum);
+    }
+
+
+    private void postorderAusgabe(BinaryTree<Ahne> pKnoten) {
+        if (pKnoten != null && !pKnoten.isEmpty()) {
+            postorderAusgabe(pKnoten.getLeftTree());
+            postorderAusgabe(pKnoten.getRightTree());
+            System.out.println(pKnoten.getContent().getVorname() + " " + pKnoten.getContent().getNachname());
+        }
+    }
+
+
+    // INORDER
+    public void startInorderAusgabe() {
+        this.inorderAusgabe(this.ahnenbaum);
+    }
+
+
+    private void inorderAusgabe(BinaryTree<Ahne> pKnoten) {
+        if (pKnoten != null && !pKnoten.isEmpty()) {
+            inorderAusgabe(pKnoten.getLeftTree());
+            System.out.println(pKnoten.getContent().getVorname() + " " + pKnoten.getContent().getNachname());
+            inorderAusgabe(pKnoten.getRightTree());
         }
     }
 }
