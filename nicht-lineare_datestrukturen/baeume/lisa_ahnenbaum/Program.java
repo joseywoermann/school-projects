@@ -13,47 +13,48 @@ public class Program {
         this.ahnenbaum = new BinaryTree<Ahne>(new Ahne("Lisa", "Simpson", 'f'), b3, b6);
     }
 
+
     // PREORDER
-    public void startPreorderAusgabe() {
-        this.preorderAusgabe(this.ahnenbaum);
+    public void startPreorder() {
+        this.preorder(this.ahnenbaum);
     }
 
 
-    private void preorderAusgabe(BinaryTree<Ahne> pKnoten) {
+    private void preorder(BinaryTree<Ahne> pKnoten) {
         if (pKnoten != null && !pKnoten.isEmpty()) {
             System.out.println(pKnoten.getContent().getVorname() + " " + pKnoten.getContent().getNachname());
-            preorderAusgabe(pKnoten.getLeftTree());
-            preorderAusgabe(pKnoten.getRightTree());
+            this.preorder(pKnoten.getLeftTree());
+            this.preorder(pKnoten.getRightTree());
         }
     }
 
 
     // POSTORDER
-    public void startPostorderAusgabe() {
-        this.postorderAusgabe(this.ahnenbaum);
+    public void startPostorder() {
+        this.postorder(this.ahnenbaum);
     }
 
 
-    private void postorderAusgabe(BinaryTree<Ahne> pKnoten) {
+    private void postorder(BinaryTree<Ahne> pKnoten) {
         if (pKnoten != null && !pKnoten.isEmpty()) {
-            postorderAusgabe(pKnoten.getLeftTree());
-            postorderAusgabe(pKnoten.getRightTree());
+            this.postorder(pKnoten.getLeftTree());
+            this.postorder(pKnoten.getRightTree());
             System.out.println(pKnoten.getContent().getVorname() + " " + pKnoten.getContent().getNachname());
         }
     }
 
 
     // INORDER
-    public void startInorderAusgabe() {
-        this.inorderAusgabe(this.ahnenbaum);
+    public void startInorder() {
+        this.inorder(this.ahnenbaum);
     }
 
 
-    private void inorderAusgabe(BinaryTree<Ahne> pKnoten) {
+    private void inorder(BinaryTree<Ahne> pKnoten) {
         if (pKnoten != null && !pKnoten.isEmpty()) {
-            inorderAusgabe(pKnoten.getLeftTree());
+            this.inorder(pKnoten.getLeftTree());
             System.out.println(pKnoten.getContent().getVorname() + " " + pKnoten.getContent().getNachname());
-            inorderAusgabe(pKnoten.getRightTree());
+            this.inorder(pKnoten.getRightTree());
         }
     }
 }
